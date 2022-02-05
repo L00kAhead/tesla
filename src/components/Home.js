@@ -4,7 +4,6 @@ import Section from "./Section.js";
 import carInfo from "../data/carInfo.json";
 const Home = () => {
   const data = carInfo;
-  console.log(data);
   return (
     <Container>
       {data.map((carData) => {

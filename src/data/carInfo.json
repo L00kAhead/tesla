@@ -49,20 +49,21 @@
   },
   {
     "id": 4,
-    "title": "Lowest Cost Solar Panels in America",
-    "description": "Money-back guarantee",
-    "image": "solar-panel.jpg",
-    "leftBtnText": "Order Now",
-    "rightBtnText": "Learn More"
-  },
-  {
-    "id": 5,
     "title": "Solar for New Roofs",
     "description": "Solar Roof Cost Less Than a New Roof",
     "image": "solar-roof.jpg",
     "leftBtnText": "Order Now",
     "rightBtnText": "Learn More"
   },
+  {
+    "id": 5,
+    "title": "Lowest Cost Solar Panels in America",
+    "description": "Money-back guarantee",
+    "image": "solar-panel.jpg",
+    "leftBtnText": "Order Now",
+    "rightBtnText": "Learn More"
+  },
+  
   {
     "id": 6,
     "title": "Accessories",
