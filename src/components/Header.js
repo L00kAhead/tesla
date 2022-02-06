@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import CloseIcon from "@material-ui/icons/Close";
+
 
 const Header = () => {
+  const [menuStatus, setMenuStatus] = useState(false);
+
   return (
     <Container>
       <a>
@@ -17,12 +21,31 @@ const Header = () => {
       </Menu>
 
       <RightMenu>
-        <a href="#">Shop</a>
-        <a href="#">Account</a>
-        <CustomMenu>Menu</CustomMenu>
+        <CustomMenu onClick={(_) => setMenuStatus(true)}>Menu</CustomMenu>
       </RightMenu>
 
-      <BurgerNav>
+      <BurgerNav show={menuStatus}>
+        <CloseWrapper>
+          <CustomClose onClick={(_) => setMenuStatus(false)} />
+        </CloseWrapper>
+        <li>
+          <a href="#">Model S</a>
+        </li>
+        <li>
+          <a href="#">Model 3</a>
+        </li>
+        <li>
+          <a href="#">Model X</a>
+        </li>
+        <li>
+          <a href="#">Model Y</a>
+        </li>
+        <li>
+          <a href="#">Solar Roof</a>
+        </li>
+        <li>
+          <a href="#">Solar Panels</a>
+        </li>
         <li>
           <a href="#">Existing Inventory</a>
         </li>
@@ -33,10 +56,10 @@ const Header = () => {
           <a href="#">Trade-In</a>
         </li>
         <li>
-          <a href="#">Cyber Truck</a>
+          <a href="#">Shop</a>
         </li>
         <li>
-          <a href="#">Roadster</a>
+          <a href="#">Account</a>
         </li>
       </BurgerNav>
     </Container>
@@ -73,6 +96,7 @@ const Menu = styled.div`
   @media (max-width: 987px) {
     display: none;
   }
+
 `;
 
 const RightMenu = styled.div`
@@ -100,7 +124,8 @@ const BurgerNav = styled.div`
   list-style: none;
   padding: 1.25rem;
   text-align: left;
-
+  transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
+  transition: transform 0.3s ease-in-out;
   li {
       padding : 1rem 0;
       border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -108,4 +133,12 @@ const BurgerNav = styled.div`
           font-weight: bold;
       } 
   }
+`;
+
+const CloseWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+const CustomClose = styled(CloseIcon)`
+  cursor: pointer;
 `;

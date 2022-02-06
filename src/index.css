@@ -9,12 +9,19 @@
 }
 
 body {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  padding: 0.5rem;
 }
 
 @keyframes animateDown {

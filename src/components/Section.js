@@ -6,7 +6,7 @@ const Section = (props) => {
   console.log(props.id[-1]);
   return (
     <Wrap bgImg={props.backgroundImage}>
-      <Fade bottom>
+      <Fade top>
         <ItemText>
           <h1>{props.title}</h1>
           <p>{props.description}</p>
